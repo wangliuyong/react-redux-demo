@@ -1,4 +1,4 @@
-function counter(state, action) {
+function reducer(state, action) {
   switch (action.type) {
     case 'INCREMENT':
       return {n:state.n + action.payload}
@@ -9,4 +9,4 @@ function counter(state, action) {
   }
 }
 
-export default counter
+export default reducer

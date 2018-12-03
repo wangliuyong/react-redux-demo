@@ -6,9 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 //import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux'
 import {Provider} from 'react-redux'
-import counter from './reducers/index'
+import reducer from './reducers/index'
 
-const store =createStore(counter)
+const store =createStore(reducer)
 console.log('store',store)
 render()
 store.subscribe(() => {
@@ -29,3 +29,4 @@ function render(){
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
 //serviceWorker.unregister();
+//redux 可以创造一个顶层的全局属性，可以一直往下传
