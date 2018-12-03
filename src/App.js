@@ -58,13 +58,13 @@ class App extends Component {
 }
 
 //将state映射到props上面
-function x(state){
+function getPartStore(state){
   return {
     n:state.n
   }
 }
 //将actions映射到props上面
-const y={
+const createAction={
   add:()=>{
     return {
       type:'INCREMENT',
@@ -75,4 +75,4 @@ const y={
 
 connect(x,y)(App)
 
-export default connect(x,y)(App);
+export default connect(getPartStore,createAction)(App);
