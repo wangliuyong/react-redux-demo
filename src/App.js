@@ -57,13 +57,13 @@ class App extends Component {
   }
 }
 
-//将state映射到props上面
+//将state映射到props上面，获取部分state
 function getPartStore(state){
   return {
     n:state.n
   }
 }
-//将actions映射到props上面
+//将actions映射到props上面，创建action
 const createAction={
   add:()=>{
     return {
