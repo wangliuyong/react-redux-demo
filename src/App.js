@@ -66,15 +66,12 @@ function getPartStore(state){
 }
 //将actions映射到props上面，创建action
 //mapDispatchToProps
-const createAction={
-  add:()=>{
-    return {
-      type:'INCREMENT',
-      payload:15
-    }
+function createAction(dispatch){
+  return{
+    add:()=> dispatch({ type:'INCREMENT',payload:15 })
   }
 }
 
-connect(x,y)(App)
+
 
 export default connect(getPartStore,createAction)(App);
